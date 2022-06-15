@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--The style copied from https://colorlib.com/wp/bootstrap-contact-form/-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="A.fonts,,_icomoon,,_style.css+css,,_bootstrap.min.css+css,,_style.css,Mcc.Ur9QPgg62V.css.pagespeed.cf.9pl5VifGec.css" />
+
+<title>Contact Form #9</title>
+<script nonce="695f756d-9d1b-44e4-9c89-ecb8898094eb">(function(w,d){!function(a,e,t,r){a.zarazData=a.zarazData||{},a.zarazData.executed=[],a.zaraz={deferred:[]},a.zaraz.q=[],a.zaraz._f=function(e){return function(){var t=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:t})}};for(const e of["track","set","ecommerce","debug"])a.zaraz[e]=a.zaraz._f(e);a.addEventListener("DOMContentLoaded",(()=>{var t=e.getElementsByTagName(r)[0],z=e.createElement(r),n=e.getElementsByTagName("title")[0];for(n&&(a.zarazData.t=e.getElementsByTagName("title")[0].text),a.zarazData.w=a.screen.width,a.zarazData.h=a.screen.height,a.zarazData.j=a.innerHeight,a.zarazData.e=a.innerWidth,a.zarazData.l=a.location.href,a.zarazData.r=e.referrer,a.zarazData.k=a.screen.colorDepth,a.zarazData.n=e.characterSet,a.zarazData.o=(new Date).getTimezoneOffset(),a.zarazData.q=[];a.zaraz.q.length;){const e=a.zaraz.q.shift();a.zarazData.q.push(e)}z.defer=!0,z.referrerPolicy="origin",z.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(a.zarazData))),t.parentNode.insertBefore(z,t)}))}(w,d,0,"script");})(window,document);</script></head>
+<body>
+<div class="content">
+<div class="container">
+<div class="row align-items-stretch no-gutters contact-wrap">
+<div class="col-md-12">
+<div class="form h-100">
+<h3>Contact Us</h3>
+        <br>
+<form class="mb-5" method="POST" id="contactForm" name="contactForm" action="{% url 'contact' %}">
+        {% csrf_token %}
+<div class="row">
+<div class="col-md-6 form-group mb-3">
+<label for="" class="col-form-label">Name</label>
+<input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+</div>
+
+<div class="col-md-6 form-group mb-3">
+<label for="" class="col-form-label">Email</label>
+<input type="text" class="form-control" name="email" id="email" placeholder="Your email">
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 form-group mb-3">
+<label for="message" class="col-form-label">Message</label>
+<textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Write your message"></textarea>
+</div>
+</div>
+        <p> for more information you can contact us in <a href="https://iwtsp.com/966504665368">WhatsApp</a> </p>
+<div class="row">
+<div class="col-md-12 form-group">
+<input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+<span class="submitting"></span>
+</div>
+</div>
+</form>
+<div id="form-message-warning mt-4"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js+bootstrap.min.js.pagespeed.jc.wIHOSAsM94.js"></script><script>eval(mod_pagespeed_R$PrRtBrU7);</script>
+<script>eval(mod_pagespeed_qz_A65H3BP);</script>
+<script src="js/jquery.validate.min.js+main.js.pagespeed.jc.7iUBwolJxI.js"></script><script>eval(mod_pagespeed_$wFW$lgDs5);</script>
+<script>eval(mod_pagespeed_RZ32TS$lP7);</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"70468350eb9c9359","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}
